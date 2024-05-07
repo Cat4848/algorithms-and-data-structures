@@ -2,7 +2,7 @@
 
 export default function mergeSort(list, p, r) {
   if (p >= r) return;
-  const q = Math.max((p + q) / 2);
+  const q = Math.floor((p + r) / 2);
   mergeSort(list, p, q);
   mergeSort(list, q + 1, r);
   merge(list, p, q, r);
@@ -10,23 +10,23 @@ export default function mergeSort(list, p, r) {
 }
 
 function merge(list, p, q, r) {
-  const leftLength = q - p;
+  const leftLength = q - p + 1;
   const rightLength = r - q;
 
   const leftList = [];
   const rightList = [];
 
   for (let i = 0; i < leftLength; i++) {
-    leftList[i] = list[p + i];
+    leftList[i] = list[p + i - 1];
   }
 
   for (let j = 0; j < rightLength; j++) {
-    rightList[j] = list[q + j + 1];
+    rightList[j] = list[q + j];
   }
 
   let i = 0;
   let j = 0;
-  let k = p;
+  let k = p - 1;
 
   while (i < leftLength && j < rightLength) {
     if (leftList[i] <= rightList[j]) {
@@ -51,3 +51,6 @@ function merge(list, p, q, r) {
     k++;
   }
 }
+
+const unsortedList = [12, 3, 7, 9, 14, 6, 11, 2];
+const sortedList = mergeSort(unsortedList, 1, unsortedList.length);
