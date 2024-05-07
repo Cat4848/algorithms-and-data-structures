@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "name": "algorithms-and-data-structures",
+  "version": "1.0.0",
+  "description": "This repo is geared towards learning Algorithms and Data Structures.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Catalin Pirtiu - catalinrol@gmail.com",
+  "license": "ISC"
+}
