@@ -18,7 +18,10 @@ const categories = [
 export function makeTree(categories, parent) {
   let tree = {};
   const filteredCategories = categories.filter((c) => c.parent === parent);
-  filteredCategories.forEach((c) => (tree[c.id] = makeTree(categories, c.id)));
+  filteredCategories.forEach((c) => {
+    tree[c.id] = makeTree(categories, c.id);
+    console.log("tree", JSON.stringify(tree, null, 2));
+  });
   return tree;
 }
 const tree = makeTree(categories, null);
