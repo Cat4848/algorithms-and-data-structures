@@ -1,6 +1,6 @@
 // part of the divide and conquer algorithms
 
-function mergeSort(list, p, r) {
+export default function mergeSort(list, p, r) {
   if (p >= r) return;
   const q = Math.max((p + q) / 2);
   mergeSort(list, p, q);
