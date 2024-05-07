@@ -1,6 +1,13 @@
 // part of the divide and conquer algorithms
 
-function mergeSort() {}
+function mergeSort(list, p, r) {
+  if (p >= r) return;
+  const q = Math.max((p + q) / 2);
+  mergeSort(list, p, q);
+  mergeSort(list, q + 1, r);
+  merge(list, p, q, r);
+  return list;
+}
 
 function merge(list, p, q, r) {
   const leftLength = q - p;
