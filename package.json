@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "typescript": "^5.5.3"
   },
   "name": "algorithms-and-data-structures",
   "version": "1.0.0",
