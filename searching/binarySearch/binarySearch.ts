@@ -9,7 +9,7 @@ export default function binarySearch(arr: number[], v: number): number | false {
     if (v <= arr[mid]) {
       search(start, mid);
     } else {
-      search(mid, end);
+      // search(mid, end);
     }
   }
 
