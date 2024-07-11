@@ -1,8 +1,13 @@
-export function countdown(n) {
+export function countdown(n: number) {
   if (n <= 0) return;
   countdown(n - 1);
 }
 countdown(4);
+
+interface Categories {
+  id: string;
+  parent: string;
+}
 
 const categories = [
   { id: "animals", parent: null },
@@ -15,12 +20,11 @@ const categories = [
   { id: "siamese", parent: "cats" }
 ];
 
-export function makeTree(categories, parent) {
+export function makeTree(categories: Categories[], parent) {
   let tree = {};
   const filteredCategories = categories.filter((c) => c.parent === parent);
   filteredCategories.forEach((c) => {
     tree[c.id] = makeTree(categories, c.id);
-    console.log("tree", JSON.stringify(tree, null, 2));
   });
   return tree;
 }

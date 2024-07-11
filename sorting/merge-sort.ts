@@ -1,6 +1,6 @@
 // part of the divide and conquer algorithms
 
-export default function mergeSort(list, p, r) {
+export default function mergeSort(list: number[], p: number, r: number) {
   if (p >= r) return;
   const q = Math.floor((p + r) / 2);
   mergeSort(list, p, q);
@@ -9,7 +9,7 @@ export default function mergeSort(list, p, r) {
   return list;
 }
 
-function merge(list, p, q, r) {
+function merge(list: number[], p: number, q: number, r: number) {
   const leftLength = q - p + 1;
   const rightLength = r - q;
 

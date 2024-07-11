@@ -7,7 +7,8 @@
   "module": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "jest --watch --coverage"
+    "test": "jest --watch --coverage",
+    "build": "tsc -w -p tsconfig.build.json"
   },
   "keywords": [],
   "author": "Catalin Pirtiu - catalinrol@gmail.com",
