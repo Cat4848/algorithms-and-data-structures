@@ -1,3 +1,8 @@
+/**
+ * Greatest Common Divisor or 2 numbers
+ * What is the greatest number that divides
+ * both x and y with no remainder?
+ */
 export const gcd = (x: number, y: number) => {
   const lower = Math.min(x, y);
   let gcd = 1;
