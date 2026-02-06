@@ -2,11 +2,11 @@
   "name": "algorithms-and-data-structures",
   "version": "1.0.0",
   "description": "This repo is geared towards learning Algorithms and Data Structures.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
-  "module": "index.js",
+  "module": "dist/index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon dist/index.js",
     "test": "jest --watch --coverage",
     "build": "tsc -w -p tsconfig.build.json"
   },
