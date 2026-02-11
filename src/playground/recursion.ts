@@ -20,12 +20,14 @@ const categories = [
   { id: "siamese", parent: "cats" }
 ];
 
-export function makeTree(categories: Categories[], parent) {
-  let tree = {};
+export function makeTree(categories: Categories[], parent: string) {
+  let tree: { [key: string]: string | null } = {};
   const filteredCategories = categories.filter((c) => c.parent === parent);
   filteredCategories.forEach((c) => {
+    // @ts-ignore
     tree[c.id] = makeTree(categories, c.id);
   });
   return tree;
 }
+// @ts-ignore
 const tree = makeTree(categories, null);
